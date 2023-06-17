@@ -4,7 +4,9 @@
 
 SELECT sales.car_id, COUNT(sales.car_id) AS total_number_of_cars,
        make, type, style, cost_$, SUM(cost_$) AS total_$
+       
 FROM sales
+
 JOIN cars ON cars.car_id = sales.car_id
 WHERE EXTRACT(YEAR FROM purchase_date) = 2022
 GROUP BY sales.car_id, make, type, style, cost_$;
