@@ -27,9 +27,7 @@ GROUP BY sales.car_id, make, type, style, cost_$;
 SELECT salesman_id, COUNT(car_id) as total_cars_sold
 FROM sales
 GROUP BY salesman_id;
-
                         OR
-
 SELECT SP.SALESMAN_ID, NAME, COUNT(CAR_ID) NUMBER_OF_CARS_SOLD
 FROM SALES 
 JOIN SALESPERSONS SP
